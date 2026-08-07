@@ -1,11 +1,11 @@
 {
-  "version": "0.1.0",
-  "notes": "Primeira versao com auto-update",
-  "pub_date": "2026-08-07T18:40:49Z",
+  "version": "0.1.1",
+  "notes": "Versao 0.1.1 com correcoes",
+  "pub_date": "2026-08-07T19:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcE1Ibnd3TWhicUVSRmpzNnV1aWVkOEZ2bVJaMVM0SDJnZVBKdkdIV24yelEvd0dXc3A4TXZaU3drM2dBaWhWMWgvZ1E0VUZxNXFNL2lLTmQvN2RObVF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MTI2NTk4CWZpbGU6c3Vzc3Vycm9fMC4xLjBfeDY0LXNldHVwLmV4ZQo1UldUWWhXUXNKM21UVXhnUjBxNHFiSEdROUErR2d3NkpLdElxQmwwOHcxdGdVY3BRSlB1QXlkTVlyMUhtYXpvSWtkZldjbjhIL0ZZYjE2OVJaajhBQT09Cg==",
-      "url": "https://gitlab.com/longen-group/sussurro-app/-/uploads/71a9bd28b571c831f28e04e71d53178b/sussurro_0.1.0_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEdNTkl2YVlxRzF4djBXQk94TThWeUlwSjYrZ21uMHZ2cEc0SnNJVlh4N0ttOTNaY1pQUTZ3eFJNT3BnS0Nzc2VoWmREb1ByenlzUXFlbm1RQTdQeWdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MTMxNDk2CWZpbGU6c3Vzc3Vycm9fMC4xLjFfeDY0LXNldHVwLmV4ZQp5ZXlZNEF0NDZDckFidTF6dWxac2tzaUhsb05KVFN1bW51cjlhenZNRm9yeFhHRGRUd3dhNW1GWmp6Y3NjT3NGc0RTMXAvVTFmTkl6VFpPczhFRUZCZz09Cg==",
+      "url": "https://gitlab.com/longen-group/sussurro-app/-/uploads/0e24732bf9e450af3a4fef2d3ddbaa06/sussurro_0.1.1_x64-setup.exe"
     }
   }
 }
