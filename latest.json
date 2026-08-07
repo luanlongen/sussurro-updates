@@ -1,0 +1,11 @@
+{
+  "version": "0.1.0",
+  "notes": "Primeira versao com auto-update",
+  "pub_date": "2026-08-07T18:40:49Z",
+  "platforms": {
+    "windows-x86_64": {
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcE1Ibnd3TWhicUVSRmpzNnV1aWVkOEZ2bVJaMVM0SDJnZVBKdkdIV24yelEvd0dXc3A4TXZaU3drM2dBaWhWMWgvZ1E0VUZxNXFNL2lLTmQvN2RObVF3PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MTI2NTk4CWZpbGU6c3Vzc3Vycm9fMC4xLjBfeDY0LXNldHVwLmV4ZQo1UldUWWhXUXNKM21UVXhnUjBxNHFiSEdROUErR2d3NkpLdElxQmwwOHcxdGdVY3BRSlB1QXlkTVlyMUhtYXpvSWtkZldjbjhIL0ZZYjE2OVJaajhBQT09Cg==",
+      "url": "https://gitlab.com/longen-group/sussurro-app/-/uploads/71a9bd28b571c831f28e04e71d53178b/sussurro_0.1.0_x64-setup.exe"
+    }
+  }
+}
