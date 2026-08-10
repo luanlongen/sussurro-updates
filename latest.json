@@ -1,11 +1,11 @@
 {
-  "version": "0.1.4",
-  "notes": "v0.1.4 - Posicao da pill salva entre sessoes",
+  "version": "0.1.5",
+  "notes": "v0.1.5 - Pill reaches top, instant paste, relaunch fix",
   "pub_date": "2026-08-10T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEk4dlNqNmpHbWE3YlRLdU4zWFUycVNaR091RmVhZG5McnFJcmFmaDdKU0FmQjZyckFwRVNMamd2TWxTcFNxS3A2YVRKbGN1dGpORTBrNnpwM2wrUndzPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzY1OTEwCWZpbGU6c3Vzc3Vycm9fMC4xLjRfeDY0LXNldHVwLmV4ZQpaS2NvejArSE9Qb1docCtqK0xnK1Bmd0dWaElSYWlhRC9GRFVsMkUzbmlSa2drL3BWY3hWZGgrd3IyNEZ3eG5UZTNPY0NGRjNtWmRmOTlOYUE3d3hDZz09Cg==",
-      "url": "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.1.4_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEh3MEdEZld3V1phYXRZYlhRNmkwakw4S2ZpdEJ0M1kwV1Ftam1MbGtpeThzTzlZUXZNREYvWTVPL0xqd0FZdWF1dWlUTjBNR09reXcrYjhNclcvNFFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzcwOTYzCWZpbGU6c3Vzc3Vycm9fMC4xLjVfeDY0LXNldHVwLmV4ZQphcDNiVWdMUVZTc09yK3Rsd0ZJS1JwMkc3YkxWcVdSbys2RzFRN2NZcUc2cGJzdndveHRWWGZzVzRKSjZ0TW1kdy9XTWFIN1d5WDRCVU1Fd1JkQytEQT09Cg==",
+      "url": "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.1.5_x64-setup.exe"
     }
   }
 }
