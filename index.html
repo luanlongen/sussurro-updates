@@ -30,7 +30,7 @@ a{color:inherit;text-decoration:none}
 .btn-lg{padding:14px 28px;font-size:16px;border-radius:10px}
 
 /* ─── Hero ─── */
-.hero{min-height:100vh;display:flex;align-items:center;padding:100px 32px 80px;position:relative;overflow:hidden}
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 32px 80px;position:relative;overflow:hidden;background:url('assets/page.png') right center/48% auto no-repeat}
 .hero::before{content:'';position:absolute;top:-40%;right:-20%;width:900px;height:900px;background:radial-gradient(circle,rgba(233,51,53,.04) 0%,transparent 70%);pointer-events:none}
 .hero::after{content:'';position:absolute;top:20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(233,51,53,.03) 0%,transparent 70%);pointer-events:none}
 .hero-inner{max-width:1280px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
@@ -43,9 +43,6 @@ a{color:inherit;text-decoration:none}
 .hero-tags{display:flex;gap:20px;font-size:12px;color:rgba(255,255,255,.3);font-weight:500}
 .hero-tags span{display:flex;align-items:center;gap:6px}
 .hero-tags span::before{content:'';width:6px;height:6px;border-radius:50%;background:#E93335;opacity:.6}
-.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:400px}
-.hero-visual::before{content:'';position:absolute;inset:-60px;background:radial-gradient(ellipse at center,rgba(233,51,53,.06) 0%,transparent 60%);pointer-events:none}
-.hero-visual::after{content:'';position:absolute;inset:0;background:url('assets/page.png') center/contain no-repeat;opacity:.92}
 
 /* ─── Sections ─── */
 .section{padding:120px 32px;position:relative}
@@ -113,7 +110,7 @@ a{color:inherit;text-decoration:none}
   .hero-desc{max-width:100%}
   .hero-buttons,.hero-tags{justify-content:center}
   .hero-title{font-size:48px}
-  .hero-image-wrap{max-width:480px;margin:0 auto}
+  .hero{background-image:none}
   .features-grid{grid-template-columns:repeat(2,1fr)}
   .steps::before{display:none}
   .steps{grid-template-columns:1fr;gap:24px}
@@ -173,7 +170,6 @@ a{color:inherit;text-decoration:none}
         <span>Rápido e eficiente</span>
       </div>
     </div>
-    <div class="hero-visual img-reveal"></div>
   </div>
 </section>
 
