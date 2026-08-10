@@ -1,11 +1,11 @@
 {
-  "version": "0.1.5",
-  "notes": "v0.1.5 - Pill reaches top, instant paste, relaunch fix",
+  "version": "0.1.6",
+  "notes": "v0.1.6 - Pill top fix, relaunch fix, paste+animation",
   "pub_date": "2026-08-10T00:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEh3MEdEZld3V1phYXRZYlhRNmkwakw4S2ZpdEJ0M1kwV1Ftam1MbGtpeThzTzlZUXZNREYvWTVPL0xqd0FZdWF1dWlUTjBNR09reXcrYjhNclcvNFFrPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzcwOTYzCWZpbGU6c3Vzc3Vycm9fMC4xLjVfeDY0LXNldHVwLmV4ZQphcDNiVWdMUVZTc09yK3Rsd0ZJS1JwMkc3YkxWcVdSbys2RzFRN2NZcUc2cGJzdndveHRWWGZzVzRKSjZ0TW1kdy9XTWFIN1d5WDRCVU1Fd1JkQytEQT09Cg==",
-      "url": "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.1.5_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEIrQTlCYkZvSU5wck5uLy83UlBXd1l3ZnNxemZBUHBnRUF2UmdRYXZhckpBZTYwcXJYYWczZmFKeXVaVTFJenlScGs1dFpuS0RwS1dVZFdGcFNtSUE0PQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzcxOTMyCWZpbGU6c3Vzc3Vycm9fMC4xLjZfeDY0LXNldHVwLmV4ZQpWRk1haW5NTlRiTHZKQ3g0NmdZb0VrcEZKUmFhRWxjclB0d3MzS2NlVThkbm9JOXAzWlNnTTUyelJYcTFIMVJUb2ZjaktiUEgrSENQTDhNeTh1bjFCdz09Cg==",
+      "url": "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.1.6_x64-setup.exe"
     }
   }
 }
