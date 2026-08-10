@@ -1,79 +1,306 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sussurro - Download</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #0a0a0c;
-      color: #fff;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 20px;
-    }
-    .card {
-      background: #141416;
-      border: 1px solid rgba(255,255,255,0.06);
-      border-radius: 16px;
-      padding: 48px;
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-    }
-    h1 {
-      font-size: 32px;
-      font-weight: 700;
-      margin-bottom: 8px;
-    }
-    .sub {
-      color: rgba(255,255,255,0.5);
-      font-size: 14px;
-      margin-bottom: 32px;
-    }
-    .btn {
-      display: block;
-      background: #ef4444;
-      color: #fff;
-      text-decoration: none;
-      padding: 14px 24px;
-      border-radius: 10px;
-      font-size: 16px;
-      font-weight: 600;
-      margin-bottom: 12px;
-      transition: background 0.2s;
-    }
-    .btn:hover { background: #dc2626; }
-    .btn.mac {
-      background: rgba(255,255,255,0.06);
-      color: rgba(255,255,255,0.4);
-    }
-    .btn.mac:hover { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6); }
-    .version {
-      font-size: 12px;
-      color: rgba(255,255,255,0.3);
-      margin-top: 24px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sussurro — Sua voz. Em qualquer lugar.</title>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,'Inter','Segoe UI',system-ui,sans-serif;background:#080808;color:#fff;line-height:1.5;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ─── Header ─── */
+.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
+.header.scrolled{background:rgba(8,8,8,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.04)}
+.header-logo{display:flex;align-items:center;gap:10px}
+.header-logo img{height:28px;width:auto}
+.header-logo span{font-weight:700;font-size:16px;letter-spacing:-0.01em}
+.header-nav{display:flex;gap:32px;font-size:14px;color:rgba(255,255,255,.55);font-weight:500}
+.header-nav a{transition:color .2s}
+.header-nav a:hover{color:#fff}
+.header-cta{display:flex;align-items:center;gap:12px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s;white-space:nowrap}
+.btn-primary{background:#E93335;color:#fff}
+.btn-primary:hover{background:#dc2626;transform:translateY(-1px);box-shadow:0 4px 20px rgba(233,51,53,.3)}
+.btn-secondary{background:rgba(255,255,255,.06);color:#fff;border:1px solid rgba(255,255,255,.08)}
+.btn-secondary:hover{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.15)}
+.btn-lg{padding:14px 28px;font-size:16px;border-radius:10px}
+
+/* ─── Hero ─── */
+.hero{min-height:100vh;display:flex;align-items:center;padding:100px 32px 80px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-40%;right:-20%;width:900px;height:900px;background:radial-gradient(circle,rgba(233,51,53,.04) 0%,transparent 70%);pointer-events:none}
+.hero::after{content:'';position:absolute;top:20%;left:-10%;width:600px;height:600px;background:radial-gradient(circle,rgba(233,51,53,.03) 0%,transparent 70%);pointer-events:none}
+.hero-inner{max-width:1280px;width:100%;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center;position:relative;z-index:1}
+.hero-content{max-width:560px}
+.hero-eyebrow{font-size:13px;font-weight:600;letter-spacing:.08em;color:rgba(255,255,255,.35);margin-bottom:16px;text-transform:uppercase}
+.hero-title{font-size:64px;font-weight:800;line-height:1.08;letter-spacing:-0.025em;margin-bottom:20px;color:#F5F5F5}
+.hero-title span{color:#E93335}
+.hero-desc{font-size:18px;color:rgba(255,255,255,.45);line-height:1.6;margin-bottom:36px;max-width:460px}
+.hero-buttons{display:flex;gap:12px;margin-bottom:28px}
+.hero-tags{display:flex;gap:20px;font-size:12px;color:rgba(255,255,255,.3);font-weight:500}
+.hero-tags span{display:flex;align-items:center;gap:6px}
+.hero-tags span::before{content:'';width:6px;height:6px;border-radius:50%;background:#E93335;opacity:.6}
+.hero-image-wrap{position:relative;display:flex;align-items:center;justify-content:center}
+.hero-image-wrap::before{content:'';position:absolute;inset:-40px;background:radial-gradient(ellipse at center,rgba(233,51,53,.08) 0%,transparent 70%);border-radius:24px;pointer-events:none}
+.hero-image{width:100%;max-width:580px;border-radius:16px;border:1px solid rgba(255,255,255,.06);box-shadow:0 0 80px rgba(233,51,53,.06),0 20px 60px rgba(0,0,0,.5);transition:transform .3s}
+.hero-image:hover{transform:translateY(-4px)}
+
+/* ─── Sections ─── */
+.section{padding:120px 32px;position:relative}
+.section-inner{max-width:1120px;margin:0 auto}
+.section-label{font-size:12px;font-weight:700;letter-spacing:.1em;color:#E93335;text-transform:uppercase;margin-bottom:12px}
+.section-title{font-size:48px;font-weight:800;line-height:1.12;letter-spacing:-0.02em;color:#F5F5F5;margin-bottom:16px;max-width:700px}
+.section-subtitle{font-size:18px;color:rgba(255,255,255,.4);line-height:1.6;max-width:560px}
+
+/* ─── Features ─── */
+.features-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-top:60px}
+.feature-card{background:#111113;border:1px solid rgba(255,255,255,.04);border-radius:14px;padding:32px 28px;transition:all .25s}
+.feature-card:hover{border-color:rgba(233,51,53,.15);background:#141416;transform:translateY(-2px)}
+.feature-icon{width:40px;height:40px;border-radius:10px;background:rgba(233,51,53,.1);display:flex;align-items:center;justify-content:center;margin-bottom:20px}
+.feature-icon svg{width:18px;height:18px;stroke:#E93335;fill:none;stroke-width:1.5}
+.feature-card h3{font-size:16px;font-weight:700;margin-bottom:8px;color:#F5F5F5}
+.feature-card p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.55}
+
+/* ─── How it works ─── */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin-top:60px;position:relative}
+.steps::before{content:'';position:absolute;top:40px;left:calc(16.67% + 20px);right:calc(16.67% + 20px);height:1px;background:linear-gradient(90deg,rgba(255,255,255,.04),rgba(233,51,53,.15),rgba(255,255,255,.04))}
+.step{text-align:center;position:relative;z-index:1}
+.step-num{width:64px;height:64px;border-radius:50%;background:#111113;border:1px solid rgba(255,255,255,.06);display:flex;align-items:center;justify-content:center;font-size:22px;font-weight:800;color:rgba(255,255,255,.3);margin:0 auto 20px;transition:all .3s}
+.step:hover .step-num{border-color:#E93335;color:#E93335;box-shadow:0 0 24px rgba(233,51,53,.12)}
+.step h4{font-size:18px;font-weight:700;margin-bottom:8px}
+.step p{font-size:14px;color:rgba(255,255,255,.4);line-height:1.55}
+
+/* ─── Privacy ─── */
+.privacy{background:#0B0B0D;border-top:1px solid rgba(255,255,255,.03);border-bottom:1px solid rgba(255,255,255,.03)}
+.privacy-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:48px}
+.privacy-item{display:flex;gap:14px;align-items:flex-start;padding:20px;border-radius:12px;background:#111113;border:1px solid rgba(255,255,255,.03)}
+.privacy-dot{width:8px;height:8px;border-radius:50%;background:#E93335;margin-top:6px;flex-shrink:0}
+.privacy-item h4{font-size:15px;font-weight:600;margin-bottom:4px}
+.privacy-item p{font-size:13px;color:rgba(255,255,255,.35)}
+
+/* ─── CTA ─── */
+.cta{text-align:center;padding:140px 32px 120px}
+.cta-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(233,51,53,.04) 0%,transparent 60%);pointer-events:none}
+.cta-inner{position:relative;z-index:1}
+.cta-title{font-size:52px;font-weight:800;letter-spacing:-0.02em;margin-bottom:16px}
+.cta-sub{font-size:18px;color:rgba(255,255,255,.4);margin-bottom:40px}
+.cta-buttons{display:flex;gap:14px;justify-content:center}
+
+/* ─── Footer ─── */
+.footer{padding:40px 32px;border-top:1px solid rgba(255,255,255,.04)}
+.footer-inner{max-width:1120px;margin:0 auto;display:flex;align-items:center;justify-content:space-between}
+.footer-brand{display:flex;align-items:center;gap:10px}
+.footer-brand img{height:22px;width:auto}
+.footer-brand span{font-size:13px;color:rgba(255,255,255,.25)}
+.footer-links{display:flex;gap:24px;font-size:13px;color:rgba(255,255,255,.3)}
+.footer-links a{transition:color .2s}
+.footer-links a:hover{color:rgba(255,255,255,.6)}
+
+/* ─── Animations ─── */
+.fade-in{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
+.fade-in.visible{opacity:1;transform:translateY(0)}
+.img-reveal{opacity:0;transform:translateY(12px);transition:opacity .8s ease .2s,transform .8s ease .2s}
+.img-reveal.visible{opacity:1;transform:translateY(0)}
+
+/* ─── Responsive ─── */
+@media(max-width:1024px){
+  .hero-inner{grid-template-columns:1fr;text-align:center;gap:48px}
+  .hero-content{max-width:100%}
+  .hero-desc{max-width:100%}
+  .hero-buttons,.hero-tags{justify-content:center}
+  .hero-title{font-size:48px}
+  .hero-image-wrap{max-width:480px;margin:0 auto}
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .steps::before{display:none}
+  .steps{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:768px){
+  .header{padding:16px 20px}
+  .header-nav{display:none}
+  .hero{padding:80px 20px 60px;min-height:auto}
+  .hero-title{font-size:36px}
+  .hero-desc{font-size:16px}
+  .hero-buttons{flex-direction:column}
+  .section{padding:80px 20px}
+  .section-title{font-size:32px}
+  .features-grid{grid-template-columns:1fr}
+  .privacy-grid{grid-template-columns:1fr}
+  .cta-title{font-size:36px}
+  .cta-buttons{flex-direction:column;align-items:center}
+  .footer-inner{flex-direction:column;gap:16px;text-align:center}
+  .footer-links{flex-wrap:wrap;justify-content:center}
+}
+</style>
 </head>
 <body>
-  <div class="card">
-    <h1>Sussurro</h1>
-    <p class="sub">Gravador de voz com transcricao por IA</p>
-    
-    <a class="btn" href="downloads/sussurro_0.1.7_x64-setup.exe">
-      Baixar para Windows
-    </a>
-    
-    <a class="btn mac">
-      macOS — em breve
-    </a>
-    
-    <p class="version">Ultima versao: 0.1.7</p>
+
+<!-- ─── Header ─── -->
+<header class="header" id="header">
+  <a href="#" class="header-logo">
+    <img src="assets/logo-page.png" alt="Sussurro">
+    <span>Sussurro</span>
+  </a>
+  <nav class="header-nav">
+    <a href="#features">Recursos</a>
+    <a href="#how">Como funciona</a>
+    <a href="#privacy">Privacidade</a>
+  </nav>
+  <div class="header-cta">
+    <a href="#download" class="btn btn-primary">Baixar agora</a>
   </div>
+</header>
+
+<!-- ─── Hero ─── -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content fade-in">
+      <p class="hero-eyebrow">Sussurro</p>
+      <h1 class="hero-title">Sua voz.<br><span>Em qualquer lugar.</span></h1>
+      <p class="hero-desc">O Sussurro transforma sua voz em texto com precisão e segurança usando inteligência artificial.</p>
+      <div class="hero-buttons">
+        <a href="downloads/sussurro_0.1.7_x64-setup.exe" class="btn btn-primary btn-lg">Baixar para Windows</a>
+        <a href="#" class="btn btn-secondary btn-lg">macOS — em breve</a>
+      </div>
+      <div class="hero-tags">
+        <span>Transcrição precisa</span>
+        <span>Privacidade garantida</span>
+        <span>Rápido e eficiente</span>
+      </div>
+    </div>
+    <div class="hero-image-wrap img-reveal">
+      <img src="assets/page.png" alt="Sussurro" class="hero-image">
+    </div>
+  </div>
+</section>
+
+<!-- ─── Features ─── -->
+<section class="section" id="features">
+  <div class="section-inner">
+    <p class="section-label fade-in">O que é o Sussurro</p>
+    <h2 class="section-title fade-in">Transforme sua voz em texto.</h2>
+    <p class="section-subtitle fade-in">O Sussurro foi criado para tornar a transcrição de voz simples, rápida e natural.</p>
+    <div class="features-grid">
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 15a3 3 0 100-6 3 3 0 000 6z"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a1.998 1.998 0 01-2.83 2.83l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a1.998 1.998 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a1.998 1.998 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a1.998 1.998 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg></div>
+        <h3>Transcrição com IA</h3>
+        <p>Transforme sua voz em texto com alta precisão usando inteligência artificial.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div>
+        <h3>Privacidade</h3>
+        <p>Seus áudios e transcrições permanecem sob seu controle. Nada é compartilhado.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><polyline points="15 17 20 12 15 7"/><path d="M4 12h16"/></svg></div>
+        <h3>Atalho global</h3>
+        <p>Fale de qualquer lugar usando um simples atalho de teclado. Sem interrupções.</p>
+      </div>
+      <div class="feature-card fade-in">
+        <div class="feature-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+        <h3>Histórico inteligente</h3>
+        <p>Encontre e reutilize suas transcrições quando precisar. Organizado e acessível.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── How it works ─── -->
+<section class="section" id="how">
+  <div class="section-inner">
+    <p class="section-label fade-in">Como funciona</p>
+    <h2 class="section-title fade-in">Fale. Transcreva. Continue.</h2>
+    <div class="steps">
+      <div class="step fade-in">
+        <div class="step-num">01</div>
+        <h4>Fale</h4>
+        <p>Pressione o atalho e comece a falar. O Sussurro captura sua voz instantaneamente.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">02</div>
+        <h4>Transcreva</h4>
+        <p>A inteligência artificial transforma sua voz em texto com alta precisão em segundos.</p>
+      </div>
+      <div class="step fade-in">
+        <div class="step-num">03</div>
+        <h4>Use</h4>
+        <p>Copie, edite ou envie o texto para onde quiser. Simples e direto.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Privacy ─── -->
+<section class="section privacy" id="privacy" style="background-image:url('assets/background.png');background-size:cover;background-position:center;background-blend-mode:overlay;background-color:#0B0B0D">
+  <div class="section-inner" style="position:relative;z-index:1">
+    <p class="section-label fade-in">Privacidade</p>
+    <h2 class="section-title fade-in">Sua voz continua sendo sua.</h2>
+    <p class="section-subtitle fade-in">Privacidade não é um detalhe. É parte do Sussurro.</p>
+    <div class="privacy-grid">
+      <div class="privacy-item fade-in">
+        <div class="privacy-dot"></div>
+        <div><h4>Controle sobre suas gravações</h4><p>Você decide o que gravar e quando. Nada é enviado sem sua permissão.</p></div>
+      </div>
+      <div class="privacy-item fade-in">
+        <div class="privacy-dot"></div>
+        <div><h4>Histórico organizado</h4><p>Todas as transcrições ficam salvas localmente. Acesse quando quiser.</p></div>
+      </div>
+      <div class="privacy-item fade-in">
+        <div class="privacy-dot"></div>
+        <div><h4>Configurações de processamento</h4><p>Escolha entre processamento local ou remoto. Flexibilidade com segurança.</p></div>
+      </div>
+      <div class="privacy-item fade-in">
+        <div class="privacy-dot"></div>
+        <div><h4>Segurança</h4><p>Transcrição precisa sem comprometer seus dados. Privacidade em primeiro lugar.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="section cta" id="download">
+  <div class="cta-bg"></div>
+  <div class="cta-inner">
+    <h2 class="cta-title fade-in">Pronto para experimentar o Sussurro?</h2>
+    <p class="cta-sub fade-in">Baixe agora e transforme sua voz em texto.</p>
+    <div class="cta-buttons fade-in">
+      <a href="downloads/sussurro_0.1.7_x64-setup.exe" class="btn btn-primary btn-lg">Windows — Baixar agora</a>
+      <a href="#" class="btn btn-secondary btn-lg">macOS — Baixar agora</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── Footer ─── -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-brand">
+      <img src="assets/logo-page.png" alt="Sussurro">
+      <span>© 2026 Sussurro. Todos os direitos reservados.</span>
+    </div>
+    <nav class="footer-links">
+      <a href="#">Início</a>
+      <a href="#features">Recursos</a>
+      <a href="#privacy">Privacidade</a>
+      <a href="#">Termos de uso</a>
+      <a href="#">Contato</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+// Header scroll effect
+const header = document.getElementById('header');
+window.addEventListener('scroll', () => {
+  header.classList.toggle('scrolled', window.scrollY > 20);
+});
+
+// Scroll reveal animation
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
+}, { threshold: 0.15, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.fade-in,.img-reveal').forEach(el => observer.observe(el));
+</script>
 </body>
 </html>
