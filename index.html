@@ -12,15 +12,16 @@ img{max-width:100%;display:block}
 a{color:inherit;text-decoration:none}
 
 /* ─── Header ─── */
-.header{position:fixed;top:0;left:0;right:0;z-index:100;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;transition:background .3s}
-.header.scrolled{background:rgba(8,8,8,.85);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.04)}
-.header-logo{display:flex;align-items:center;gap:10px}
-.header-logo img{height:28px;width:auto}
-.header-logo span{font-weight:700;font-size:16px;letter-spacing:-0.01em}
-.header-nav{display:flex;gap:32px;font-size:14px;color:rgba(255,255,255,.55);font-weight:500}
-.header-nav a{transition:color .2s}
-.header-nav a:hover{color:#fff}
-.header-cta{display:flex;align-items:center;gap:12px}
+.header{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:100;padding:10px 8px;display:flex;align-items:center;gap:28px;background:rgba(20,20,20,.78);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.06);border-radius:40px;transition:all .3s}
+.header-logo{display:flex;align-items:center;gap:8px;padding-left:8px}
+.header-logo img{height:24px;width:auto}
+.header-logo span{font-weight:700;font-size:14px;letter-spacing:-0.01em;display:none}
+.header-nav{display:flex;gap:8px}
+.header-nav a{padding:8px 16px;border-radius:20px;font-size:13px;font-weight:500;color:rgba(255,255,255,.45);transition:all .2s;white-space:nowrap}
+.header-nav a:hover{color:#fff;background:rgba(255,255,255,.05)}
+.header-cta .btn{padding:8px 18px;font-size:13px;border-radius:20px;margin-right:4px}
+.menu-toggle{display:none;background:none;border:none;color:#fff;padding:8px;cursor:pointer;border-radius:50%}
+.menu-toggle:hover{background:rgba(255,255,255,.06)}
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:10px 20px;border-radius:8px;font-size:14px;font-weight:600;cursor:pointer;border:none;transition:all .2s;white-space:nowrap}
 .btn-primary{background:#E93335;color:#fff}
 .btn-primary:hover{background:#dc2626;transform:translateY(-1px);box-shadow:0 4px 20px rgba(233,51,53,.3)}
@@ -42,10 +43,9 @@ a{color:inherit;text-decoration:none}
 .hero-tags{display:flex;gap:20px;font-size:12px;color:rgba(255,255,255,.3);font-weight:500}
 .hero-tags span{display:flex;align-items:center;gap:6px}
 .hero-tags span::before{content:'';width:6px;height:6px;border-radius:50%;background:#E93335;opacity:.6}
-.hero-image-wrap{position:relative;display:flex;align-items:center;justify-content:center}
-.hero-image-wrap::before{content:'';position:absolute;inset:-40px;background:radial-gradient(ellipse at center,rgba(233,51,53,.08) 0%,transparent 70%);border-radius:24px;pointer-events:none}
-.hero-image{width:100%;max-width:580px;border-radius:16px;border:1px solid rgba(255,255,255,.06);box-shadow:0 0 80px rgba(233,51,53,.06),0 20px 60px rgba(0,0,0,.5);transition:transform .3s}
-.hero-image:hover{transform:translateY(-4px)}
+.hero-visual{position:relative;display:flex;align-items:center;justify-content:center;min-height:400px}
+.hero-visual::before{content:'';position:absolute;inset:-60px;background:radial-gradient(ellipse at center,rgba(233,51,53,.06) 0%,transparent 60%);pointer-events:none}
+.hero-visual::after{content:'';position:absolute;inset:0;background:url('assets/page.png') center/contain no-repeat;opacity:.92}
 
 /* ─── Sections ─── */
 .section{padding:120px 32px;position:relative}
@@ -106,6 +106,8 @@ a{color:inherit;text-decoration:none}
 
 /* ─── Responsive ─── */
 @media(max-width:1024px){
+  .header{gap:16px;padding:8px 6px}
+  .header-nav a{padding:6px 12px;font-size:12px}
   .hero-inner{grid-template-columns:1fr;text-align:center;gap:48px}
   .hero-content{max-width:100%}
   .hero-desc{max-width:100%}
@@ -117,8 +119,10 @@ a{color:inherit;text-decoration:none}
   .steps{grid-template-columns:1fr;gap:24px}
 }
 @media(max-width:768px){
-  .header{padding:16px 20px}
-  .header-nav{display:none}
+  .header{gap:6px;border-radius:32px;padding:8px 4px}
+  .header-nav a{padding:6px 10px;font-size:11px;border-radius:16px}
+  .header-logo span{display:none}
+  .header-cta .btn{padding:6px 14px;font-size:12px}
   .hero{padding:80px 20px 60px;min-height:auto}
   .hero-title{font-size:36px}
   .hero-desc{font-size:16px}
@@ -148,7 +152,7 @@ a{color:inherit;text-decoration:none}
     <a href="#privacy">Privacidade</a>
   </nav>
   <div class="header-cta">
-    <a href="#download" class="btn btn-primary">Baixar agora</a>
+    <a href="#download" class="btn btn-primary">Baixar</a>
   </div>
 </header>
 
@@ -161,7 +165,7 @@ a{color:inherit;text-decoration:none}
       <p class="hero-desc">O Sussurro transforma sua voz em texto com precisão e segurança usando inteligência artificial.</p>
       <div class="hero-buttons">
         <a href="downloads/sussurro_0.1.7_x64-setup.exe" class="btn btn-primary btn-lg">Baixar para Windows</a>
-        <a href="#" class="btn btn-secondary btn-lg">macOS — em breve</a>
+        <a href="downloads/sussurro_0.1.7_aarch64.dmg" class="btn btn-secondary btn-lg">Baixar para macOS</a>
       </div>
       <div class="hero-tags">
         <span>Transcrição precisa</span>
@@ -169,9 +173,7 @@ a{color:inherit;text-decoration:none}
         <span>Rápido e eficiente</span>
       </div>
     </div>
-    <div class="hero-image-wrap img-reveal">
-      <img src="assets/page.png" alt="Sussurro" class="hero-image">
-    </div>
+    <div class="hero-visual img-reveal"></div>
   </div>
 </section>
 
@@ -266,7 +268,7 @@ a{color:inherit;text-decoration:none}
     <p class="cta-sub fade-in">Baixe agora e transforme sua voz em texto.</p>
     <div class="cta-buttons fade-in">
       <a href="downloads/sussurro_0.1.7_x64-setup.exe" class="btn btn-primary btn-lg">Windows — Baixar agora</a>
-      <a href="#" class="btn btn-secondary btn-lg">macOS — Baixar agora</a>
+      <a href="downloads/sussurro_0.1.7_aarch64.dmg" class="btn btn-secondary btn-lg">macOS — Baixar agora</a>
     </div>
   </div>
 </section>
@@ -289,12 +291,6 @@ a{color:inherit;text-decoration:none}
 </footer>
 
 <script>
-// Header scroll effect
-const header = document.getElementById('header');
-window.addEventListener('scroll', () => {
-  header.classList.toggle('scrolled', window.scrollY > 20);
-});
-
 // Scroll reveal animation
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('visible'); });
