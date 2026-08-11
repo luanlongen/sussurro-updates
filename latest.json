@@ -1,11 +1,11 @@
 {
-  "version": "0.1.7",
-  "notes": "v0.1.7 - Pill top fix, Concluido animation, CI/CD",
-  "pub_date": "2026-08-10T00:00:00Z",
+  "version": "0.1.8",
+  "notes": "v0.1.8 - Pipeline chat model separation: OpenRouter with fallback (free → inclusionai), local SmolLM2 support, ChatModelSettings UI",
+  "pub_date": "2026-08-10T23:00:00Z",
   "platforms": {
     "windows-x86_64": {
-      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEduMzRMTldsQkRRWU16MFQ3ek96WStFSnBtVEpkSGdiSUZ2RTlsT0V1aURrdGlISHZZL1F6MVlvQ0dFSEhTZXZMWGZ3SWI4UUxpUFRwMmVoVDVGS3dFPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2MzcyNzYyCWZpbGU6c3Vzc3Vycm9fMC4xLjdfeDY0LXNldHVwLmV4ZQpzcGZPd1RnaGhSbmtJWjZ3WmdaZEZPY2pXc0ZIUkwydUhOWUd6QUNRK2xPQXVrc2lHREMwMHhPZlJmNUR6bUJoRmp1cWZOQ2FoN0p2SmpLOHBZOCtBUT09Cg==",
-      "url": "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.1.7_x64-setup.exe"
+      "signature": "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEsyeVVNcHpuYUhaUFR4bmx3YUVES2RmbFJVYmNxbVNvU24rZFJvTWN6VmJzV3JFUkQ2dWFPRHFHcXF4K0IrWnhmYW16ZFBvZVhZOWVmWVNMZ0M0ZXdvPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NDE0MjUzCWZpbGU6c3Vzc3Vycm9fMC4xLjhfeDY0LXNldHVwLmV4ZQpiYU5yTUh1L2J3NkhVYlZNWS9wYUdsWHk0cEZxeTZEUnRnaWVQVkZueTBMMjJHT2NLVm5PeTE1bjFlcXdwd2hQNnY5ak9vNnZwOHdvd2QzQWYxWEZBQT09Cg==",
+      "url": "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.1.8_x64-setup.exe"
     }
   }
 }
