@@ -1,11 +1,11 @@
 {
     "platforms":  {
                       "windows-x86_64":  {
-                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcERyVWlMQmJUeEY5TFNPN1V6cEJRWmhHdCtyZkVYKzBkUytJK1E1UTl5Nndqa2V6ajlwUkkxRzJxdEZVTENqNFpXcmFQMm1DSGhSdWM3WDhtd21pQ1FJPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg2NTQyNDkwCWZpbGU6c3Vzc3Vycm9fMC4yLjZfeDY0LXNldHVwLmV4ZQp1QjQxemczNHRKVXdKSCtnMEM2QWljUURacHhTQ1FkeUN3SjN4THc1MXVIYVpTV1IvRkYrcWZoNTA1Z0xzL0VNMlY3UHFScmlXSnZieWZEM1JoaTJEdz09Cg==",
-                                             "url":  "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.2.6_x64-setup.exe"
+                                             "signature":  "dW50cnVzdGVkIGNvbW1lbnQ6IHNpZ25hdHVyZSBmcm9tIHRhdXJpIHNlY3JldCBrZXkKUlVTSGZVdkdRYmdCcEpnMlhRSGp2cllpZzFjMmlMTlRzY3VadHZhbVBVdXhNUXJUbUlJbVI3THY2UVRRTStUK0hlL1I1RWY2WU9pczVqWU1CaHR4UGg0Skh4K2pMNzRBWHdBPQp0cnVzdGVkIGNvbW1lbnQ6IHRpbWVzdGFtcDoxNzg3NjY1MDE2CWZpbGU6c3Vzc3Vycm9fMC4yLjdfeDY0LXNldHVwLmV4ZQp5bmhXMlE2dnh3dVozVHlrNnJvSmgxYkRObW14RUxnS2Z3SWFNd0NTTncyUzZ2S0NIZUdqbXBtRUllWXF1YjBkS1hRblJtODJVWExDWFY3VEdOQWtCQT09Cg==",
+                                             "url":  "https://luanlongen.github.io/sussurro-updates/downloads/sussurro_0.2.7_x64-setup.exe"
                                          }
                   },
-    "pub_date":  "2026-08-12T10:48:15Z",
-    "version":  "0.2.6",
-    "notes":  "Versao 0.2.6"
+    "pub_date":  "2026-08-25T10:37:01Z",
+    "version":  "0.2.7",
+    "notes":  "Versao 0.2.7"
 }
